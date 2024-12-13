@@ -24,7 +24,13 @@ export const MoodForm = ({ createMoodAction }: MoodFormProps) => {
 	});
 	return (
 		<Flex gap={16}>
-			<Calendar size="xl" highlightToday />
+			<Calendar
+				size="xl"
+				highlightToday
+				getDayProps={(date) => ({
+					className: 'bg-red-500',
+				})}
+			/>
 			{showForm && (
 				<Form
 					form={form}

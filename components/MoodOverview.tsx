@@ -23,7 +23,7 @@ export const MoodOverview = ({ createMoodAction, entries }: MoodOverviewProps) =
 		// TODO set form values
 	}, [selectedDate])
 	return (
-		<Flex gap={16} justify="center">
+		<Flex gap={16} wrap="wrap" justify="center">
 			<MoodForm
 				{...{
 					createMoodAction,

@@ -1,15 +1,15 @@
-import '@mantine/core/styles.css';
-import '@mantine/dates/styles.css';
-import './styles.css';
+import '@mantine/core/styles.css'
+import '@mantine/dates/styles.css'
+import './styles.css'
 
-import React from 'react';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
-import { theme } from '../theme';
+import React from 'react'
+import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
+import { theme } from '../theme'
 
 export const metadata = {
 	title: 'Pank Katonia Mood Calendar',
 	description: 'Meow',
-};
+}
 
 export default function RootLayout({ children }: { children: any }) {
 	return (
@@ -26,5 +26,5 @@ export default function RootLayout({ children }: { children: any }) {
 				<MantineProvider theme={theme}>{children}</MantineProvider>
 			</body>
 		</html>
-	);
+	)
 }

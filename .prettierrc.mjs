@@ -4,8 +4,8 @@ const config = {
 	singleQuote: true,
 	tabWidth: 4,
 	useTabs: true,
+	semi: false,
 	trailingComma: 'es5',
-
 	plugins: ['@ianvs/prettier-plugin-sort-imports'],
 	importOrder: [
 		'.*styles.css$',

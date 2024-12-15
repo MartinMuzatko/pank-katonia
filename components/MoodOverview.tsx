@@ -53,7 +53,7 @@ export const MoodOverview = ({ createMoodAction, entries }: MoodOverviewProps) =
 								isSameDayAsToday || isSameDayAsSelected ? '2px solid purple' : '',
 						},
 						className: entries.find((e) => dayjs(date).isSame(e.date, 'day'))
-							? `bg-white bg-gradient-to-tr from-${pankColor}-400 from-50% to-${katoniaColor}-400 to-50% text-black ${isSameDayAsToday ? 'border-blue' : ''}`
+							? `bg-white bg-gradient-to-br from-${pankColor}-400 from-50% to-${katoniaColor}-400 to-50% text-black ${isSameDayAsToday ? 'border-blue' : ''}`
 							: '',
 						onClick: () => setSelectedDate(formatDate(date)),
 					}

@@ -111,7 +111,11 @@ export const MoodForm = ({ createMoodAction, entries, user, date }: MoodFormProp
 					data={['good', 'alright', 'bad']}
 					renderOption={renderSelectOption}
 				/>
-				<Textarea label="What's on your mind today?" {...form.getInputProps('feeling')} />
+				<Textarea
+					autosize
+					label="What's on your mind today?"
+					{...form.getInputProps('feeling')}
+				/>
 				<Button type="submit">{existingEntry ? 'Update' : 'Submit'}</Button>
 			</Stack>
 		</Form>

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { match } from 'ts-pattern'
 import { Flex } from '@mantine/core'
 import { Calendar } from '@mantine/dates'
-import { CreateMood, formatDate, Mood, moods, MoodSelection } from '@/domain/mood'
+import { CreateMood, formatDate, Mood, moods, MoodSelection, User } from '@/domain/mood'
 import { MoodForm } from './MoodForm'
 
 type MoodOverviewProps = {
@@ -18,7 +18,7 @@ export const MoodOverview = ({ createMoodAction, entries }: MoodOverviewProps) =
 
 	useEffect(() => {
 		const entry = entries.find(
-			(e) => dayjs(selectedDate).isSame(e.date, 'day') && e.user === 'Pank'
+			(e) => dayjs(selectedDate).isSame(e.date, 'day') && e.user === User.pank
 		)
 		// TODO set form values
 	}, [selectedDate])
@@ -38,10 +38,10 @@ export const MoodOverview = ({ createMoodAction, entries }: MoodOverviewProps) =
 				// date={new Date(date)}
 				getDayProps={(date) => {
 					const katoniaEntry = entries.find(
-						(e) => dayjs(date).isSame(e.date, 'day') && e.user === 'Katonia'
+						(e) => dayjs(date).isSame(e.date, 'day') && e.user === User.katonia
 					)
 					const pankEntry = entries.find(
-						(e) => dayjs(date).isSame(e.date, 'day') && e.user === 'Pank'
+						(e) => dayjs(date).isSame(e.date, 'day') && e.user === User.pank
 					)
 					const katoniaColor = moods[katoniaEntry?.mood as MoodSelection] ?? 'gray'
 					const pankColor = moods[pankEntry?.mood as MoodSelection] ?? 'gray'

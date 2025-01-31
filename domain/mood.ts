@@ -1,5 +1,10 @@
 import { z } from 'zod'
 
+export enum User {
+	pank = 'Pank',
+	katonia = 'Katonia',
+}
+
 export const createMoodSchema = z.object({
 	date: z.string(),
 	mood: z.string().min(1).max(128),

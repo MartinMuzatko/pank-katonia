@@ -1,6 +1,7 @@
 import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import { MoodOverview } from '@/components/MoodOverview'
+import { MoodStatistics } from '@/components/MoodStatistics'
 import { CreateMood, Mood } from '@/domain/mood'
 import { createClient } from '@/utils/supabase/server'
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle'
@@ -33,6 +34,7 @@ export default async function HomePage() {
 	return (
 		<>
 			{entries && <MoodOverview {...{ createMoodAction, entries }} />}
+			{entries && <MoodStatistics {...{ entries }} />}
 			<ColorSchemeToggle />
 		</>
 	)

@@ -27,7 +27,7 @@ export function formatDate(date: Date) {
 	return `${year}-${month}-${day}`
 }
 
-export const moods = {
+export const moodColorMap = {
 	good: 'green',
 	alright: 'yellow',
 	bad: 'red',
